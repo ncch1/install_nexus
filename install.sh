@@ -2,6 +2,8 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
+echo "set restart-required restart" | sudo tee /etc/needrestart/needrestart.conf
+
 sudo apt update && sudo apt upgrade -y
 
 sudo apt install -y build-essential pkg-config libssl-dev git-all
