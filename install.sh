@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export DEBIAN_FRONTEND=noninteractive
+
 sudo apt update && sudo apt upgrade -y
 
 sudo apt install -y build-essential pkg-config libssl-dev git-all
@@ -15,5 +17,7 @@ source ~/.bashrc
 rustup update
 
 sudo apt install -y screen nano
+
+unset DEBIAN_FRONTEND
 
 echo "Установка завершена!"
